@@ -5,18 +5,7 @@ from split import setup_params
 import sys
 import argparse
 import unittest
-try:
-    from unittest.mock import patch  # python 3.3+
-except ImportError:
-    from mock import patch  # python 2.6-3.2
-
-# TODO drop support for 2.7?
-# handle python 2 v 3 cases
-try:
-  FileNotFoundError
-except:
-  FileNotFoundError = IOError
-
+from unittest.mock import patch
 
 class TestSplit(unittest.TestCase):
   # https://stackoverflow.com/questions/4219717/how-to-assert-output-with-nosetest-unittest-in-python
