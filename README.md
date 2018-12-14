@@ -27,7 +27,5 @@ If you do not pass the intput filename and outputdir on the command line you wil
 You can run the tests by entering the following into the command line.  
 `python -m unittest discover tests --buffer`
 
-Tested on python versions: 3.4, 3.5, 3.6, 3.7
+Tested on python versions: 3.4 - 3.6
 For more information see the .travis.yml file
-
-
