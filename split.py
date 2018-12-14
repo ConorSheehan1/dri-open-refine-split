@@ -78,18 +78,15 @@ def process_file(inputfile, outputdir):
                 outfile = path.join(outputdir, str(filecount) + ".xml")
 
             # Write the line to the current outfile
-            o = open(outfile, "a")
-            o.write(line)
-            o.close
+            with open(outfile, "a") as o:
+                o.write(line)
 
             # If we have reached the end of the file reset the filename
             searchObj = re.search( r'^</qualifieddc', line)
             if searchObj:
                 outfile = False
-                filecount = filecount+1
-
+                filecount += 1
 
 
 if __name__ == '__main__':
     main()
-
