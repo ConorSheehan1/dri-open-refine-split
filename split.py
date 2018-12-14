@@ -31,15 +31,20 @@ def setup_params():
     args = parser.parse_args()
 
     if gui:
-        filename = args.filename or filedialog.askopenfilename(initialdir=".",
-                                                               title="Select file",
-                                                               filetypes=(("xml files", "*.xml"), ("all files", "*.*")))
-        outputdir = args.outputdir or filedialog.askdirectory(initialdir=".",
-                                                              title="Select output diretory")
+        filename_kwargs = {
+            "initialdir": ".",
+            "title": "Select file",
+            "filetypes": (("xml files", "*.xml"), ("all files", "*.*"))
+        }
+        outputdir_kwargs = {
+            "initialdir": ".",
+            "title": "Select output diretory"
+        }
+        filename = args.filename or filedialog.askopenfilename(**kwargs)
+        outputdir = args.outputdir or filedialog.askdirectory(**outputdir_kwargs)
     else:
         filename = args.filename or input("Please enter the input filename ")
-        outputdir = args.outputdir or input(
-            "Please enter the output directory ")
+        outputdir = args.outputdir or input("Please enter the output directory ")
 
     filename = filename.rstrip()
     outputdir = outputdir.rstrip()
