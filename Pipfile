@@ -1,0 +1,15 @@
+[[source]]
+name = "pypi"
+verify_ssl = true
+url = "https://pypi.org/simple"
+
+[requires]
+python_version = "3.5"
+
+[packages]
+"autopep8" = "*"
+# pep8 renamed to pycodestyle 
+# https://github.com/PyCQA/pycodestyle/issues/466
+pycodestyle = "*"
+
+[dev-packages]

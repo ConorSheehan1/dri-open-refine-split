@@ -29,3 +29,12 @@ You can run the tests by entering the following into the command line.
 
 Tested on python versions: 3.4 - 3.6
 For more information see the .travis.yml file
+
+# Linter
+```
+pip install --user pipenv
+pipenv install
+pipenv run pycodestyle . 
+```
+
+
