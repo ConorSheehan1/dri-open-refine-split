@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-
 import argparse
 from os import path
 import re
@@ -43,9 +42,9 @@ def setup_params():
     outputdir = outputdir.rstrip()
 
     if path.isfile(filename) and path.isdir(outputdir):
-        print("Processing input file ", filename)
-        print("Creating output xml files in ",outputdir)
-        return filename,outputdir
+        print("Processing input file", filename)
+        print("Creating output xml files in", outputdir)
+        return filename, outputdir
     else:
         print("Invalid input or output location")
         exit(1)
